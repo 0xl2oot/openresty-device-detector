@@ -1,0 +1,7 @@
+{
+    "name": "yonghong/www",
+    "type": "project",
+    "require": {
+        "piwik/device-detector": "^3.12"
+    }
+}

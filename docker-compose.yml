@@ -1,0 +1,21 @@
+version: '3'
+services:
+  nginx:
+    build: .
+    container_name: openresty
+    restart: always
+    volumes:
+    - ./conf.d:/etc/nginx/conf.d
+    ports:
+    - "8088:80"
+    depends_on: 
+    - php
+  php:
+    image: php:7.4.6-fpm-buster
+    container_name: php
+    restart: always
+    volumes:
+    - ./www:/var/www/html
+
+
+        
